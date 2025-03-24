@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BIGDreamers360 | Tu evento integral, sin preocupaciones</title>
+
+  <!-- Meta-tags SEO (versión simplificada) -->
+  <meta name="description" content="Transformamos grandes ideas en eventos inolvidables. Con más de 10 años liderando producciones integrales para marcas internacionales, festivales y eventos VIP." />
+  <meta name="keywords" content="producción integral de eventos, organización de eventos, eventos VIP, logística eventos, event organization, VIP events, event logistics" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER (HERO) -->
+  <header class="hero">
+    <img src="ruta-a-tu-logo.png" alt="Logo de BigDreamers360" class="logo" />
+    <h1>BIGDreamers360 | Tu evento integral, sin preocupaciones</h1>
+    <p class="hero-text">
+      Transformamos grandes ideas en eventos inolvidables. Con más de 10 años
+      liderando producciones integrales para marcas internacionales, festivales
+      y eventos VIP, somos el partner perfecto que buscas para convertir tu evento
+      en un éxito rotundo. Desde logística hasta catering, técnica o mobiliario,
+      deja que BIGDreamers360 lo haga realidad.
+    </p>
+    <!-- Selector de idioma y Modo Oscuro -->
+    <div class="language-selector">
+      <!-- Botones de idioma -->
+      <a href="javascript:void(0)" onclick="changeLanguage('es')">ES</a> | 
+      <a href="javascript:void(0)" onclick="changeLanguage('en')">EN</a> | 
+      <!-- Botón para alternar Modo Oscuro (evitamos #) -->
+      <a href="javascript:void(0)" onclick="toggleDarkMode()" id="dark-mode-toggle">Dark Mode</a>
+    </div>
+  </header>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="sobre-nosotros">
+    <h2 id="sobre-nosotros-title">Sobre nosotros</h2>
+    <p id="sobre-nosotros-text">
+      <strong>BIGDreamers360 | Más de una década creando eventos de éxito</strong><br/><br/>
+      Con más de 10 años de experiencia, en BIGDreamers360 trabajamos con pasión 
+      para ofrecer un servicio integral y personalizado. Hemos colaborado con 
+      <span class="highlight-darkblue">
+        clientes de primer nivel como Mallorca Live Festival, Ángel Martín, Lenovo, 
+        Los 40 Principales, Premios Ondas o los Latin Grammy
+      </span>, 
+      posicionándonos como referencia en eventos premium 
+      en España.<br/><br/>
+      Nuestro secreto: experiencia, trato cercano y capacidad para ofrecer todos 
+      los servicios desde un único proveedor, permitiéndote disfrutar plenamente 
+      de tu evento.
+    </p>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios">
+    <h2 id="servicios-title">Nuestros servicios</h2>
+
+    <!-- 1. TRANSPORTES -->
+    <div class="servicio">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen de Transportes -->
+        <img 
+          src="https://cms.vans.mercedes-benz.net/assets/5854a37c-0264-4038-bc49-2353e25d78c5?key=banner-desktop-large" 
+          alt="Imagen Transportes" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-transporte-title">Transportes</h3>
+        <p id="servicio-transporte-text">
+          <span class="highlight-blue">
+            Desde alquiler de furgonetas sin conductor hasta vuelos privados
+          </span>, ofrecemos 
+          soluciones personalizadas de transporte en las Islas Baleares, Península Ibérica 
+          e Islas Canarias. Gestionamos vehículos con conductor (VCT), minibuses, autobuses, 
+          furgonetas de carga e incluso alquiler de barcos. ¡Moviliza tu evento con BIGDreamers360!
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-1">Pide presupuesto</button>
+      </div>
+    </div>
+
+    <!-- 2. CATERING & HOSPITALITY (imagen derecha) -->
+    <div class="servicio servicio-inverso">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen Catering & Hospitality -->
+        <img 
+          src="https://i.imgur.com/4ImRiHi.jpeg" 
+          alt="Imagen Catering & Hospitality" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-catering-title">Catering & Hospitality</h3>
+        <p id="servicio-catering-text">
+          Sorprende a tus invitados con nuestro exclusivo servicio de catering y hospitality: 
+          cocina propia o in situ, menús fríos o calientes, buffet o servicio a mesa, y 
+          especialidades internacionales como cocina coreana o china. 
+          <span class="highlight-bold">
+            Creamos hospitalities a medida, cuidando cada detalle para superar todas tus expectativas.
+          </span>
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-2">Pide presupuesto</button>
+      </div>
+    </div>
+
+    <!-- 3. PRODUCCIÓN TÉCNICA (imagen izquierda) -->
+    <div class="servicio">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen Producción Técnica -->
+        <img 
+          src="https://i.imgur.com/0XkHApv.jpeg" 
+          alt="Imagen Producción Técnica" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-produccion-title">Producción Técnica</h3>
+        <p id="servicio-produccion-text">
+          Desde la selección del venue perfecto hasta la producción audiovisual completa 
+          (sonido, luces y streaming), 
+          <span class="highlight-orange">
+            nuestro equipo técnico garantiza eventos visuales y auditivos inolvidables.
+          </span> 
+          Además, cuidamos todos los detalles de seguridad (PRL). 
+          Confía en BIGDreamers360 y lleva tu evento al siguiente nivel.
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-3">Pide presupuesto</button>
+      </div>
+    </div>
+
+    <!-- 4. JEFES DE PRODUCCIÓN Y ROAD MANAGERS (imagen derecha) -->
+    <div class="servicio servicio-inverso">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen Jefes de Produccion y Road Managers -->
+        <img 
+          src="https://i.imgur.com/bisxGIq.png" 
+          alt="Imagen Jefes de Producción y Road Managers" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-roadmanager-title">Jefes de Producción y Road Managers</h3>
+        <p id="servicio-roadmanager-text">
+          Nuestro equipo altamente cualificado se encarga de coordinar proveedores, 
+          elaborar horarios detallados y solucionar cualquier imprevisto antes, 
+          durante y después del evento. 
+          <span class="highlight-bold">
+            Gestionamos invitados y personal con máxima eficiencia para que tú solo 
+            te preocupes de disfrutar del resultado.
+          </span>
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-4">Pide presupuesto</button>
+      </div>
+    </div>
+
+    <!-- 5. LOGÍSTICA DE VUELOS Y HOTELES (imagen izquierda) -->
+    <div class="servicio">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen Logistica de vuelos y hoteles -->
+        <img 
+          src="https://i.imgur.com/waB1qTt.jpeg" 
+          alt="Imagen Logística de vuelos y hoteles" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-logistica-title">Logística de vuelos y hoteles</h3>
+        <p id="servicio-logistica-text">
+          Gestionamos reservas de vuelos y hoteles, 
+          <span class="highlight-gold">
+            ofreciendo acuerdos exclusivos con alojamientos seleccionados
+          </span> 
+          en Baleares, Península y Canarias para obtener 
+          siempre los mejores precios y condiciones. Cualquier necesidad específica será 
+          resuelta con rapidez y precisión.
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-5">Pide presupuesto</button>
+      </div>
+    </div>
+
+    <!-- 6. ALQUILER DE MOBILIARIO (imagen derecha) -->
+    <div class="servicio servicio-inverso">
+      <div class="servicio-col imagen-col">
+        <!-- Imagen Alquiler de mobiliario -->
+        <img 
+          src="https://i.imgur.com/GKEa9wO.jpeg" 
+          alt="Imagen Alquiler de Mobiliario" 
+        />
+      </div>
+      <div class="servicio-col texto-col">
+        <h3 id="servicio-alquiler-title">Alquiler de Mobiliario</h3>
+        <p id="servicio-alquiler-text">
+          Te proporcionamos todo lo necesario en mobiliario y equipamiento: sofás, mesas, 
+          sillas, muebles especiales, percheros, food trucks, neveras y todo lo que puedas 
+          imaginar para tu evento o camerinos. 
+          <span class="highlight-bold">
+            Entregas rápidas y efectivas adaptadas a cada espacio y necesidad.
+          </span>
+        </p>
+        <button onclick="scrollToForm()" id="presupuesto-button-6">Pide presupuesto</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTROS CLIENTES -->
+  <section class="nuestros-clientes">
+    <h2 id="clientes-title">Nuestros clientes</h2>
+    <div class="clientes-logos">
+      <img src="ruta-logo-cliente1.png" alt="Cliente 1" />
+      <img src="ruta-logo-cliente2.png" alt="Cliente 2" />
+      <img src="ruta-logo-cliente3.png" alt="Cliente 3" />
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="contacto" id="contact-form-section">
+    <h2 id="contacto-title">Contáctanos</h2>
+    <form
+      id="contactForm"
+      action="mailto:info@bigdreamers360.com"
+      method="POST"
+      enctype="text/plain"
+    >
+      <label for="nombre" id="label-nombre">Nombre y Apellidos</label>
+      <input type="text" id="nombre" name="nombre" required/>
+
+      <label for="email" id="label-email">Email de contacto</label>
+      <input type="email" id="email" name="email" required/>
+
+      <label for="telefono" id="label-telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" required/>
+
+      <label for="descripcion" id="label-descripcion">Descripción de las necesidades</label>
+      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+      <button type="submit" id="enviar-button">Enviar</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 BigDreamers360</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    </div>
+    <p><a href="https://www.bigdreamers360.com">www.bigdreamers360.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
