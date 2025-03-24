@@ -1,0 +1,284 @@
+/*
+  SISTEMA DE MODO OSCURO
+  - Por defecto, comprobamos en JS si el usuario prefiere modo oscuro (prefers-color-scheme: dark).
+  - Si lo prefiere, activamos .dark-mode en <body>.
+  - Si el usuario hace clic en "Dark Mode" / "Light Mode", se alterna manualmente.
+*/
+
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
+/* MODO CLARO (por defecto) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode {
+  background: #2C2C2C;   /* Fondo oscuro */
+  color: #fff;           /* Texto normal en blanco */
+}
+
+/* Encabezado - Hero */
+.hero {
+  width: 100%;
+  background-color: #1F4E79; 
+  background-image: url("images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 6rem 2rem;
+  position: relative;
+  border-bottom: 1px solid #F68B1F;
+}
+
+body.dark-mode .hero {
+  background-image: none !important;
+  background-color: #2C2C2C;
+  border-bottom: 1px solid #666;
+  color: #fff;
+}
+
+.hero .logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 1rem auto;
+  line-height: 1.5;
+  color: #fff; /* Modo claro: texto blanco */
+}
+body.dark-mode .hero-text {
+  color: #fff; /* Modo oscuro: texto normal en blanco */
+}
+
+.language-selector {
+  margin-top: 1rem;
+}
+
+/* Secciones Full Width con línea naranja por defecto */
+section {
+  width: 100%;
+  padding: 2rem 5%;
+  border-bottom: 1px solid #F68B1F;
+}
+
+/* MODO OSCURO: borde y fondo en oscuro */
+body.dark-mode section {
+  border-bottom: 1px solid #666;
+  background: #2C2C2C; 
+}
+
+/* CLASES PARA RESALTAR TEXTO */
+.highlight-blue {
+  color: #1F4E79; 
+  font-weight: bold;
+}
+.highlight-orange {
+  color: #F68B1F; 
+  font-weight: bold;
+}
+.highlight-gold {
+  color: #D4AF37; 
+  font-weight: bold;
+}
+.highlight-bold {
+  font-weight: bold;
+}
+.highlight-darkblue {
+  color: #001f4e; 
+  font-weight: bold;
+}
+
+/* 
+  EN MODO OSCURO, todos los textos destacados se ponen en naranja (#F68B1F).
+  El texto normal es blanco.
+*/
+body.dark-mode .highlight-blue,
+body.dark-mode .highlight-orange,
+body.dark-mode .highlight-gold,
+body.dark-mode .highlight-darkblue,
+body.dark-mode .highlight-bold {
+  color: #F68B1F;
+}
+
+/* SOBRE NOSOTROS */
+.sobre-nosotros {
+  background: #fff;
+}
+body.dark-mode .sobre-nosotros {
+  background: #2C2C2C;
+}
+
+/* SERVICIOS */
+.servicios {
+  background: #fdfdfd;
+}
+body.dark-mode .servicios {
+  background: #2C2C2C;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.servicio.servicio-inverso {
+  flex-direction: row-reverse;
+}
+
+.servicio-col {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Ajuste de imágenes para que todas se vean con la misma altura y recortadas */
+.servicio-col.imagen-col img {
+  width: 100%;
+  height: 300px;        /* Ajustamos la misma altura para todas */
+  object-fit: cover;    /* Recorta la imagen de manera uniforme */
+  display: block;
+  border: 1px solid #ccc;
+}
+
+/* Título de cada servicio */
+.servicio-col.texto-col h3 {
+  margin-top: 0;
+}
+
+/* Botón "Pide presupuesto" */
+.servicio-col.texto-col button {
+  background: #F68B1F;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+.servicio-col.texto-col button:hover {
+  background: #d7771d;
+}
+
+/* NUESTROS CLIENTES */
+.nuestros-clientes {
+  background: #fff;
+}
+body.dark-mode .nuestros-clientes {
+  background: #2C2C2C;
+}
+
+.clientes-logos img {
+  max-width: 120px;
+  margin: 0 10px;
+}
+
+/* FORMULARIO DE CONTACTO */
+.contacto {
+  background: #f5f5f5;
+}
+body.dark-mode .contacto {
+  background: #2C2C2C;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  margin-top: 1rem;
+}
+body.dark-mode label {
+  color: #fff;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  color: #333;
+}
+/* En modo oscuro, campo de texto en gris oscuro, texto en blanco */
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #444;
+  border: 1px solid #999;
+  color: #fff;
+}
+
+#enviar-button {
+  background: #1F4E79; 
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s ease;
+}
+#enviar-button:hover {
+  background: #173a5b; 
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background: #1F4E79;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+body.dark-mode footer {
+  background: #2C2C2C;
+  border-top: 1px solid #666;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #F68B1F; 
+}
+
+footer a {
+  color: #F68B1F;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .servicio {
+    flex-direction: column;
+  }
+  .servicio.servicio-inverso {
+    flex-direction: column;
+  }
+}
+
+
+
+
